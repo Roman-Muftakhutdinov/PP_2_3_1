@@ -9,7 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0f2d180-57c9-417d-9466-3e97e3047f98" name="Changes" comment="Сделана логика, осталось исправить вывод таблицы" />
+    <list default="true" id="a0f2d180-57c9-417d-9466-3e97e3047f98" name="Changes" comment="Сделана логика, осталось исправить вывод таблицы">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a2ef091-b65a-47b0-bf4d-fac786459474.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a2ef091-b65a-47b0-bf4d-fac786459474.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/web/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/web/controllers/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/users/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +73,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.37126437",
     "settings.editor.selected.configurable": "preferences.keymap",
@@ -175,7 +185,8 @@
       <updated>1702392150029</updated>
       <workItem from="1702392151126" duration="318000" />
       <workItem from="1702392476646" duration="6453000" />
-      <workItem from="1702399563007" duration="36996000" />
+      <workItem from="1702399563007" duration="37320000" />
+      <workItem from="1702625640421" duration="5079000" />
     </task>
     <task id="LOCAL-00001" summary="Сделана логика, осталось исправить вывод таблицы">
       <created>1702584340436</created>
@@ -184,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702584340436</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделана логика, осталось исправить вывод таблицы">
+      <created>1702584455231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702584455231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
