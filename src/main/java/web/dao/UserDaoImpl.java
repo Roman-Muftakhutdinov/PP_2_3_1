@@ -2,11 +2,11 @@ package web.dao;
 
 import org.springframework.stereotype.Repository;
 import web.model.User;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
+
 @Repository
 public class UserDaoImpl implements UserDao {
 
@@ -23,7 +23,6 @@ public class UserDaoImpl implements UserDao {
         TypedQuery<User> query = em.createQuery("select u from User u where u.id = :id", User.class);
         query.setParameter("id", id);
         return query.getResultList().stream().findAny().orElse(null);
-//        return users.stream().filter(user -> user.getId() == id).findAny().orElse(null);
     }
 
     @Override
@@ -34,7 +33,6 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void delete(long id) {
         em.remove(show(id));
-//        users.removeIf(p ->p.getId() == id);
     }
 
     @Override

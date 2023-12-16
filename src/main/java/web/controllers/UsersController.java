@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.model.User;
 import web.service.UserService;
-
 import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/users")
 public class UsersController {
 
-    private UserService userService;
+    private final UserService userService;
+
     public UsersController(UserService userService) {
         this.userService = userService;
     }
@@ -29,6 +29,7 @@ public class UsersController {
         model.addAttribute("users", userService.listUsers());
         return "users/list";
     }
+
     @GetMapping("/{id}")
     public String show(@PathVariable("id") int id, Model model) {
         model.addAttribute("user", userService.show(id));
@@ -39,12 +40,11 @@ public class UsersController {
     public String newPerson(@ModelAttribute("user") User user) {
         return "users/new";
     }
+
     @PostMapping()
-    public String add(@ModelAttribute("user") @Valid User user,
-                      BindingResult bindingResult) {
+    public String add(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return "users/new";
-
         userService.save(user);
         return "redirect:/users";
     }
@@ -54,13 +54,13 @@ public class UsersController {
         model.addAttribute("user", userService.show(id));
         return "users/edit";
     }
-//@PatchMapping("/{id}")
+
     @PostMapping("/{id}")
-     public String update( @ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
-         if (bindingResult.hasErrors())
+    public String update( @ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return "users/edit";
-         userService.update(user.getId(), user);
-         return  "redirect:/users";
+        userService.update(user.getId(), user);
+        return  "redirect:/users";
     }
 
     @DeleteMapping("/{id}")
@@ -68,5 +68,4 @@ public class UsersController {
         userService.delete(id);
         return "redirect:/users";
     }
-
 }

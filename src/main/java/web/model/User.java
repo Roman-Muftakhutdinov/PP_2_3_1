@@ -9,35 +9,43 @@ import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private long id;
+
     @NotEmpty(message = "el nombre no puede estar vacio")
     @Size(min = 2, max = 30, message = "el nombre debe ser de 2 a 30")
     @Column(name = "name")
     private String name;
+
     @NotEmpty(message = "el nombre no puede estar vacio")
     @Size(min = 2, max = 30, message = "el nombre debe ser de 2 a 30")
     @Column(name = "surname")
     private String surname;
+
     @Min(value = 0, message = "debe tener más de 0 años")
     @Column(name = "age")
     private int age;
 
     public User() { }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                '}';
+    public User(long id, String name, String surname, int age) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+    }
+
+    public User(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 
     public long getId() {
@@ -72,16 +80,13 @@ public class User {
         this.age = age;
     }
 
-    public User(long id, String name, String surname, int age) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
-
-    public User(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
