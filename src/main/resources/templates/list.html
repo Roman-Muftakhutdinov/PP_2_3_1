@@ -25,7 +25,6 @@
         </tr>
         <tr th:each="user : ${users}">
             <td th:text="${user.getId()}"></td>
-<!--            <td th:text="${user.getName()}">-->
             <td>
                 <a th:href="@{/users/{id}(id=${user.getId()})}"
                    th:text="${user.getName()}">user</a>
@@ -35,12 +34,6 @@
         </tr>
     </table>
 </div>
-
-
-<!--<div th:each="user : ${users}">-->
-<!--    <a th:href="@{/users/{id}(id=${user.getId()})}"-->
-<!--       th:text="${user.getName() + ',' +  user.getAge()}">user</a>-->
-<!--</div>-->
 <br/>
 <hr/>
 <a href="/users/new">Create new user</a>

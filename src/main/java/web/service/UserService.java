@@ -7,11 +7,12 @@ public interface UserService {
 
     List<User> listUsers();
 
-    User show(long id);
+    User show(Long id);
 
-    void delete(long id);
+    void delete(Long id);
 
     void save(User user);
 
-    void update(long id, User user);
+    User saveAndFlush(User user);
+
 }
