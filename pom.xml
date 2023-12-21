@@ -8,7 +8,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>org.example</groupId>
-  <artifactId>PP_2_3_1_CRUD</artifactId>
+  <artifactId>PP_3_1</artifactId>
   <packaging>war</packaging>
   <properties>
     <spring-webmvc.version>5.3.14</spring-webmvc.version>
